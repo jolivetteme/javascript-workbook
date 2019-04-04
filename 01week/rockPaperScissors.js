@@ -9,9 +9,41 @@ const rl = readline.createInterface({
 
 
 function rockPaperScissors(hand1, hand2) {
-
   // Write code here
+  //var resultofexpression = conditionasboolean ? truepart: falsepart;
+  hand1 = parseInt(hand1);
+  hand2 = parseInt(hand2);
 
+  // var whichOne = ['rock':1,'paper':2, 'scissors':3]
+
+  var rock = 1;;
+  var paper = 2;
+  var scissors = 3;
+
+  var winner = "Player ";
+
+
+
+  
+  if (hand1===1&&hand2===3) {
+    winner += 1 +" Wins!!";
+  } else if (hand1===1&&hand2===2) {
+    winner += 2 +" Wins!!";
+  } else if (hand1===2&&hand2===1) {
+    winner += 1 +" Wins!!";
+  } else if (hand1===2&&hand2===3) {
+    winner += 2 +" Wins!!";
+  } else if (hand1===3&&hand2===2) {
+    winner += 1 +" Wins!!";
+  } else if (hand1===3&&hand2===1) {
+    winner += 2 +" Wins!!";
+  }
+    else {
+    winner = "It's a tie!";
+  }
+
+
+  return winner;
 }
 
 function getPrompt() {
