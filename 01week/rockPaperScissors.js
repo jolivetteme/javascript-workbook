@@ -11,35 +11,26 @@ const rl = readline.createInterface({
 function rockPaperScissors(hand1, hand2) {
   // Write code here
   //var resultofexpression = conditionasboolean ? truepart: falsepart;
-  hand1 = parseInt(hand1);
-  hand2 = parseInt(hand2);
+  hand1 = hand1.toLowerCase().trim();
+  hand2 = hand2.toLowerCase().trim();
 
   // var whichOne = ['rock':1,'paper':2, 'scissors':3]
-
-  var rock = 1;;
-  var paper = 2;
-  var scissors = 3;
-
-  var winner = "Player ";
-
-
-
+  let winner = "Hand ";
   
-  if (hand1===1&&hand2===3) {
-    winner += 1 +" Wins!!";
-  } else if (hand1===1&&hand2===2) {
-    winner += 2 +" Wins!!";
-  } else if (hand1===2&&hand2===1) {
-    winner += 1 +" Wins!!";
-  } else if (hand1===2&&hand2===3) {
-    winner += 2 +" Wins!!";
-  } else if (hand1===3&&hand2===2) {
-    winner += 1 +" Wins!!";
-  } else if (hand1===3&&hand2===1) {
-    winner += 2 +" Wins!!";
-  }
-    else {
-    winner = "It's a tie!";
+  if (hand1==='rock'&&hand2==='scissors') {
+    winner += "one" +" wins!";
+  } else if (hand1==='rock'&&hand2==='paper') {
+    winner += "two" +" wins!";
+  } else if (hand1==='paper'&&hand2==='rock') {
+    winner += "one" +" wins!";
+  } else if (hand1==='paper'&&hand2==='scissors') {
+    winner += "two" +" wins!";
+  } else if (hand1==='scissors'&&hand2==='paper') {
+    winner += "one" +" wins!";
+  } else if (hand1===3&&hand2==='rock') {
+    winner += "two" +" wins!";
+  } else {
+    winner = "It's a tie!"; 
   }
 
 
@@ -56,7 +47,6 @@ function getPrompt() {
 }
 
 // Tests
-
 if (typeof describe === 'function') {
 
   describe('#rockPaperScissors()', () => {
