@@ -1,0 +1,112 @@
+/** CSS Variables **/
+body {
+    overflow-y:hidden;
+}
+:root {
+    --game-marker-color:orange;
+}
+
+@keyframes mark {
+    from {
+        background: green;
+    }
+
+    to {
+        background: orange;
+        border-radius: 3rem;
+        transform: rotate(360deg)
+    }
+}
+body {
+    background: black;
+}
+
+/**
+ * Reset button styles.
+ * It takes a bit of work to achieve a neutral look.
+ */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* show a hand cursor on hover; some argue that we
+    should keep the default arrow cursor for buttons */
+    cursor: pointer;
+}
+
+main#game {
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(3,32.6vh);
+}
+
+main#game > button {
+    display: flex;
+    justify-content: center;
+    /* width:100%; */
+    /* height:33vh; */
+    border: 1px solid black;
+}
+
+.game-button {
+    /* default for <button>, but useful for <a> */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    /* create a small space when buttons wrap on 2 lines */
+    margin: 2px 0;
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 4px;
+    /* size comes from text & padding (no width/height) */
+    padding: 0.5em 1em;
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: #9555af;
+}
+
+/* old-school "down" effect on clic + color tweak */
+.game-button:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
+/* inverse colors on mouse-over */
+.game-button:hover {
+    color: #9555af;
+    border-color: currentColor;
+    background-color: white;
+}
+
+/* inverse colors on mouse-over and focus */
+.game-button:hover, .game-button:focus {
+    color: #9555af;
+    border-color: currentColor;
+    background-color: white;
+}
+
+.game-button {
+    /* ... */
+    /* all browsers: remove the default outline since
+        we are rolling our own focus styles */
+    outline: none;
+}
+
+/* Firefox: removes the inner border shown on focus */
+.game-button::-moz-focus-inner {
+    border: none;
+}
+footer {
+    background: white;
+}
+button.game-button {
+    background:var(--game-marker-color)
+}
+.game-button {
+    font-size:4em;
+}
+button:disabled {
+    background:red
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
